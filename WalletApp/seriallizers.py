@@ -9,7 +9,7 @@ class WalletSerializer(serializers.ModelSerializer):
         fields = ['balance', 'user', 'wallet_number']
 
 
-class TransactionActivitySerializer(serializers.ModelSerializer):
+class TransactionActivitySerializer(serializers.Serializer):
     transaction_type = [
         ('DEBIT', 'DEBIT'),
         ('CREDIT', 'CREDIT'),

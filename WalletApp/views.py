@@ -68,11 +68,11 @@ class TransactionViewSet(ModelViewSet):
 
             return Response(data=transaction_details,status=status.HTTP_200_OK)
 
-        def retrieve(self, request, *args, **kwargs):
-            return Response(data=transaction_details,status=status.HTTP_405_METHOD_NOT_ALLOWED)
+    def retrieve(self, request, *args, **kwargs):
+        return Response(data="Method not supported",status=status.HTTP_405_METHOD_NOT_ALLOWED)
 
-        def list(self, request):
-            return Response(data="Method not supported", status=status.HTTP_405_METHOD_NOT_ALLOWED)
+    def list(self, request):
+        return Response(data="Method not supported", status=status.HTTP_405_METHOD_NOT_ALLOWED)
 
 class WalletViewSet(ModelViewSet):
     queryset = Wallet.objects.all()
