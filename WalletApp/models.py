@@ -31,3 +31,4 @@ class Transaction(models.Model):
     amount = models.DecimalField(max_digits=9, decimal_places=2)
     wallet = models.ForeignKey(Wallet, on_delete=models.PROTECT)
     ref_num = models.UUIDField(primary_key=True, default=uuid.uuid4(), editable=False)
+    description = models.CharField(max_length=250)

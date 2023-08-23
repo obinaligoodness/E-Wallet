@@ -21,6 +21,7 @@ import UserApp
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('wallet/', include("WalletApp.urls")),
     path('auth/', include("djoser.urls")),
     path('auth/', include("djoser.urls.jwt"))
 ]
